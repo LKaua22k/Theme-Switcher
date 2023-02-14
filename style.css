@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+	--dark: #292C35;
+	--light: #F1F1F1;
+	--label: #111;
+    --button-icon: url(./assets/sun.svg);
+}
+
+.light body{
+    background-color: var(--dark);
+}
+
+body{
+    background-color: var(--light);
+    width: 100%;
+}
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 0;
+    width: 100%;
+    max-width: 580px;
+    align-items: center;
+    border: 1px solid red;
+}
+
+.theme{
+    position: relative;
+    display: block;
+    background-color: var(--label);
+    border: 1px solid red;
+    width: 235px;
+    height: 102px;
+    border-radius: 59px;
+}
+
+.theme button{
+    position: absolute;
+    width: 86.39px;
+    height: 86.30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--light);
+    border-radius: 50%;
+    left: 0;
+    z-index: 1;
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+.light .theme button{
+    right: 0;
+    margin-right: 12px;
+    left:initial;
+}
+
+
+.theme img{
+    display: block;
+    position: absolute;
+    width: 77px;
+    height: 77px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0;
+    margin-right: 13px;
+}
+
+.img2{
+    display: block;
+    position: absolute;
+    width: 77px;
+    height: 77px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    margin-left: 12px;
+}
+
+@keyframes slide-in{
+    from{
+        left: 0;
+    }
+
+    to{
+        left: 50%;
+    }
+}
